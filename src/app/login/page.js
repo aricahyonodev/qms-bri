@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Login() {
   return (
     <main className="flex h-screen">
-      <div className="basis-5/12 pl-10 text-sm">
+      <div className="basis-6/12 pl-10 text-sm">
         <Image
           className="w-40 py-4"
           src={"assets/icons/qms_bri.svg"}
@@ -25,7 +25,7 @@ export default function Login() {
           <InputText
             labelTitle={"Email"}
             id={"email"}
-            placeholder={"name@gmail.com"}
+            placeholder={"nama@gmail.com"}
           />
           <InputPassword
             labelTitle={"Password"}
@@ -49,7 +49,7 @@ export default function Login() {
       </div>
 
       {/* Right Side */}
-      <div className="basis-7/12 bg-gradient-to-b from-[#00529C] to-[#061523]"></div>
+      <div className="basis-6/12 bg-gradient-to-b from-[#00529C] to-[#061523]"></div>
     </main>
   );
 }

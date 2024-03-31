@@ -10,6 +10,7 @@ export default function InputPassword({ id, labelTitle, placeholder }) {
         name=""
         id={id}
         placeholder={placeholder}
+        required
       />
     </div>
   );
