@@ -1,9 +1,18 @@
+"use client"
+
 import InputPassword from "@/components/InputPassword";
 import InputText from "@/components/InputText";
 import Image from "next/image";
 import Link from "next/link";
-
+import { loginAction } from "../../lib/actions/auth";
+import { useFormState } from "react-dom";
+import TextError from "@/components/textError";
+const initialState = {
+  message : ""
+}
 export default function Login() {
+
+  const [error, actionLogin] = useFormState(loginAction, initialState);
   return (
     <main className="flex h-screen">
       <div className="basis-6/12 pl-10 text-sm">
@@ -15,13 +24,13 @@ export default function Login() {
           height={57}
         />
         <h1 className="mb-2 mt-14 text-4xl font-light">Login</h1>
-        <p className="text-primary-davy-grey mb-5 text-sm">
+        <p className="mb-5 text-sm text-primary-davy-grey">
           Selamat datang pada BRI Pendaftaran Antrian Online, <br />
           mohon login pada form di bawah ini terlebih dahulu sebelum menggunakan
           website.
         </p>
-
-        <form action="" className="w-4/6 flex-col space-y-4 ">
+        <TextError msg={error?.message}/>
+        <form action={actionLogin} className="w-4/6 flex-col space-y-4 ">
           <InputText
             labelTitle={"Email"}
             id={"email"}
@@ -31,9 +40,9 @@ export default function Login() {
             labelTitle={"Password"}
             id={"password"}
             placeholder={"password"}
-        />
+          />
           <div className="pt-4">
-            <button className="bg-primary-light-navy w-full rounded-md p-2 text-center font-medium text-white">
+            <button className="w-full rounded-md bg-primary-light-navy p-2 text-center font-medium text-white">
               Login
             </button>
           </div>
@@ -41,7 +50,7 @@ export default function Login() {
         <div className="mt-12 w-4/6 text-center">
           <p>
             Belum memiliki akun?
-            <span className="text-primary-light-navy font-medium ">
+            <span className="font-medium text-primary-light-navy ">
               <Link href="/register"> Daftar</Link>
             </span>
           </p>
