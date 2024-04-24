@@ -17,6 +17,7 @@ module.exports = {
           "light-navy": "#1A4E7D",
           "light-grey": "#D9D9D9",
           "davy-grey": "#545353",
+          "white-smoke": "#F8F6F6",
         },
       },
     },
