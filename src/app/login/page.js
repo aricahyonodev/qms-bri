@@ -10,6 +10,8 @@ import TextError from "@/components/textError";
 const initialState = {
   message : ""
 }
+import SlideShow from "./SlideShow";
+
 export default function Login() {
 
   const [error, actionLogin] = useFormState(loginAction, initialState);
@@ -58,7 +60,8 @@ export default function Login() {
       </div>
 
       {/* Right Side */}
-      <div className="basis-6/12 bg-gradient-to-b from-[#00529C] to-[#061523]"></div>
+      {/* <div className="basis-7/12 bg-gradient-to-b from-[#00529C] to-[#061523]"></div> */}
+      <SlideShow />
     </main>
   );
 }

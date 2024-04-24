@@ -8,9 +8,9 @@
   }
 }
 
-@layer components{
-  .input-form{
-    @apply border-primary-davy-grey mt-1 block w-full rounded-md border bg-gray-50 p-2 text-sm focus:outline-blue-500;
+@layer components {
+  .input-form {
+    @apply mt-1 block w-full rounded-md border border-primary-davy-grey bg-gray-50 p-2 text-sm focus:outline-blue-500;
   }
 }
 /* Need to learn later*/

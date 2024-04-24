@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { registerAction } from "../../lib/actions/auth";
 import { useFormState } from "react-dom";
+import SlideShow from "../login/SlideShow";
 
 const initialState = {
   fullName: "",
@@ -74,7 +75,8 @@ export default function Register() {
       </div>
 
       {/* Right Side */}
-      <div className="basis-6/12 bg-gradient-to-b from-[#00529C] to-[#061523]"></div>
+      {/* <div className="basis-6/12 bg-gradient-to-b from-[#00529C] to-[#061523]"></div> */}
+      <SlideShow />
     </main>
   );
 }
