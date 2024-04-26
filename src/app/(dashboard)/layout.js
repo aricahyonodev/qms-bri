@@ -21,7 +21,9 @@ export default function DashboardLayout({ children }) {
           <p>Log Out</p>
         </div>
       </nav>
-      <div className="basis-5/6 pl-10">{children}</div>
+      <div className="basis-5/6 px-14 pt-6">
+        {children}
+      </div>
     </section>
   );
 }
