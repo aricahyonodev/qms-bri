@@ -1,8 +1,8 @@
 "use server";
 
-import Joi from "joi";
 import { redirect } from "next/navigation";
 import { errorsToObject, formDataToObject } from "../helpers/converter";
+import registerValidation from "../validations/registration";
 
 export async function loginAction(prevState, formData) {
   const dataForm = formDataToObject(formData);
@@ -16,15 +16,7 @@ export async function loginAction(prevState, formData) {
 }
 
 export async function registerAction(prevState, formData) {
-  const schema = Joi.object({
-    fullName: Joi.string().required(),
-    email: Joi.string().email().required(),
-    password: Joi.string().required(),
-    rePassword: Joi.string().required(),
-  });
-  const { error, value } = schema.validate(formDataToObject(formData), {
-    abortEarly: false,
-  });
+  const {error , value} = registerValidation(formData);
   if (error) {
     return errorsToObject(error.details);
   }

@@ -1,11 +1,11 @@
 function formDataToObject(formData) {
-  const object = {};
+  const obj = {};
   formData.forEach((value, key) => {
     if (!key.includes("$ACTION")) {
-      object[key] = value;
+      obj[key] = value;
     }
   });
-  return object;
+  return obj;
 }
 function errorsToObject(errors) {
   const objErr = errors.map((err) => ({ [err.path[0]]: err.message }));
