@@ -1,5 +1,11 @@
-export default function TextError({msg}) {
-    return (
-        <p className="text-red-800 mt-2">{msg}</p>
-    )
+export default function TextError({ msg, className }) {
+  return (
+    <p
+      className={
+        "mt-2 text-red-800 " + className + ` ${msg ? "visible" : "hidden"}`
+      }
+    >
+      {msg}
+    </p>
+  );
 }
