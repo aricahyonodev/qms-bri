@@ -1,5 +1,5 @@
 import Joi from "joi";
-import { formDataToObject } from "../helpers/converter";
+import { formDataToObject } from "../../helper/converter";
 
 const messagesFullName = { "string.empty": "Nama Lengkap wajib terisi" };
 const messagesEmail = {

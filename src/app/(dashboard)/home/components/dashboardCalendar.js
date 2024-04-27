@@ -1,4 +1,4 @@
-import momentJs from "@/lib/config/moment";
+import momentJs from "@/config/moment";
 import moment from "moment";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";

@@ -1,9 +1,9 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import { errorsToObject, formDataToObject } from "../helpers/converter";
+import { errorsToObject, formDataToObject } from "../../helper/converter";
 import registerValidation from "../validations/register";
-import prismaClient from "../config/prismaClient";
+import prismaClient from "../../config/prismaClient";
 
 export async function loginAction(prevState, formData) {
   const dataForm = formDataToObject(formData);
