@@ -1,4 +1,4 @@
-import momentJs from "@/lib/momentJs/config";
+import momentJs from "@/config/moment";
 import moment from "moment";
 
 function generateDate() {

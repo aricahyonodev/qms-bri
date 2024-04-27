@@ -6,6 +6,7 @@ import Link from "next/link";
 import { registerAction } from "../../lib/actions/auth";
 import { useFormState } from "react-dom";
 import SlideShow from "../login/SlideShow";
+import TextError from "@/components/textError";
 
 const initialState = {
   fullName: "",
@@ -18,7 +19,7 @@ export default function Register() {
 
   return (
     <main className="flex min-h-screen  ">
-      <div className="basis-6/12 pl-10 text-sm">
+      <div className="basis-6/12 pl-10 text-sm ">
         <Image
           className="w-40 py-4"
           src={"assets/icons/qms_bri.svg"}
@@ -26,6 +27,8 @@ export default function Register() {
           width={228}
           height={57}
         />
+        <p className="-mb-8 mt-8"></p>
+        <TextError msg={error?.message} className={"-mb-8 mt-8 text-lg "} />
         <h1 className="mb-2 mt-14 text-4xl font-light">Daftar</h1>
         <p className="mb-5 text-sm text-primary-davy-grey">
           Selamat datang pada BRI Pendaftaran Antrian Online, mohon Daftar pada{" "}
