@@ -9,7 +9,6 @@ function generateDate() {
     const date = dateAndDay.substring(0, 2);
     const day = dateAndDay.substring(3).toLowerCase();
     if (day == "sabtu" || day == "minggu") {
-      console.log("test masuk");
       continue;
     }
 

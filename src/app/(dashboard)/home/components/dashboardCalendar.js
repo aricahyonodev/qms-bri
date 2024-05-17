@@ -5,6 +5,7 @@ import "react-calendar/dist/Calendar.css";
 
 export default function DashboardCalendar() {
   momentJs();
-  const value = moment().format("DD/MMMM/YYYY");
-  return <Calendar value={value} />;
+  const value = moment().format();
+  console.log(value);
+  return <Calendar defaultValue={value} />;
 }
