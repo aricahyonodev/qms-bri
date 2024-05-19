@@ -32,8 +32,8 @@ export async function registerAction(prevState, formData) {
 
   try {
     await prismaClient.user.create({ data: newUser });
-    redirect("/login");
   } catch (error) {
     return { message: "Pendaftaran gagal, silakan coba kembali" };
   }
+  redirect("/login");
 }
